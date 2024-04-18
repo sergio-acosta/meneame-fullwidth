@@ -4,7 +4,7 @@
 // @version      0.2
 // @description  Modifica old.meneame.net de forma que el contenido aprovecha toda la pantalla.
 // @author       Sergio A.
-// @match        *://old.meneame.net/*
+// @match        *://*.meneame.net/*
 // @grant        none
 // ==/UserScript==
 
@@ -27,6 +27,14 @@
 
             #newsletter {
                 display: none !important;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #newswrap {
+                margin: 0 !important;
             }
 
             ul#userinfo {
