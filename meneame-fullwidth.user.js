@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Menéame 100% ancho - versión 2024
 // @namespace    http://meneame.net/
-// @version      0.1
+// @version      0.2
 // @description  Modifica old.meneame.net de forma que el contenido aprovecha toda la pantalla.
 // @author       Sergio A.
-// @match        *://*.meneame.net/*
+// @match        *://old.meneame.net/*
 // @grant        none
 // ==/UserScript==
 
@@ -21,10 +21,8 @@
                 max-width: none !important;
             }
             .mnm-center-in-wrap {
-                /* Añade aquí los estilos que quieras anular, por ejemplo: */
                 width: auto !important;
                 margin: 0 !important;
-                /* etc. */
             }
 
             #newsletter {
