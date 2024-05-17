@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Menéame 100% ancho - versión 2024
 // @namespace    http://meneame.net/
-// @version      0.2
-// @description  Modifica old.meneame.net de forma que el contenido aprovecha toda la pantalla.
+// @version      0.3
+// @description  Modifica old.meneame.net de forma que el contenido aprovecha toda la pantalla y elmina algunas distracciones
 // @author       Sergio A.
 // @match        *://*.meneame.net/*
 // @grant        none
@@ -12,7 +12,7 @@
 (function() {
     'use strict';
 
-    // Función para insertar estilos que anulan los de .mnm-center-in-wrap
+    // Función para insertar estilos que anulan los elementos no deseados
     function insertOverrideStyles() {
         const style = document.createElement('style');
         style.type = 'text/css';
@@ -26,6 +26,10 @@
             }
 
             #newsletter {
+                display: none !important;
+            }
+
+            #live-window {
                 display: none !important;
             }
 
@@ -63,6 +67,6 @@
         subtree: true
     });
 
-    // También insertamos los estilos inmediatamente en caso de que los nodos relevantes ya estén en el DOM
+    // Insertamos los estilos inmediatamente en caso de que los nodos relevantes ya estén en el DOM
     insertOverrideStyles();
 })();
