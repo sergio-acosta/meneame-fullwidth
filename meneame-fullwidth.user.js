@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Menéame 100% ancho - versión 2024
 // @namespace    http://meneame.net/
-// @version      0.3
-// @description  Modifica old.meneame.net de forma que el contenido aprovecha toda la pantalla y elmina algunas distracciones
+// @version      0.4
+// @description  Modifica *.meneame.net de forma que el contenido aprovecha toda la pantalla y elmina algunas distracciones
 // @author       Sergio A.
 // @match        *://*.meneame.net/*
 // @grant        none
@@ -26,6 +26,18 @@
             }
 
             #newsletter {
+                display: none !important;
+            }
+
+            #incontent_1 {
+                display: none !important;
+            }
+
+            #widget-popular {
+                display: none !important;
+            }
+
+            .ads-interlinks {
                 display: none !important;
             }
 
